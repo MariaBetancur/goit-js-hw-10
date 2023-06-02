@@ -1,2 +1,11 @@
 @import './common';
 @import './example';
+.oculto {
+  display: none;
+}
+.loader {
+  display: none;
+}
+.error {
+  display: block;
+}

@@ -1,7 +1,16 @@
+import { fetchBreeds, fetchCatByBreed } from './cat-api.js';
 //peticion HTTP
 const breedSelect = document.querySelector('#breed-select');
+const catInfo = document.querySelector('#cat-info');
 const loader = document.querySelector('.loader');
 const errorElement = document.querySelector('.error');
+fetchBreeds()
+  .then(breeds => {
+    console.log(breeds);
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
 
 fetch('https://api.thecatapi.com/v1/breeds')
   .then(response => {

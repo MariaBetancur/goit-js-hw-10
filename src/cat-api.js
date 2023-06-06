@@ -28,5 +28,5 @@ export function fetchCatByBreed(breedId) {
       }
       return response.json();
     })
-    .then(data => data[0].breeds[0]);
+    .then(data => data[0]);
 }

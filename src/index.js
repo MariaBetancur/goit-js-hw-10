@@ -1,10 +1,6 @@
 import { fetchBreeds, fetchCatByBreed } from './cat-api.js';
 import SlimSelect from 'slim-select';
 import Notiflix from 'notiflix';
-
-new SlimSelect({
-  select: '#selectElement',
-});
 //peticion HTTP
 const breedSelect = document.querySelector('.breed-select');
 const catInfoEl = document.querySelector('.cat-info');
@@ -46,6 +42,8 @@ breedSelect.addEventListener('change', e => {
         <img src=${catData.url} alt=${cat.name} />
         <h3>${cat.name}</h3>
         <p>${cat.description}</p>
+        <h3>Temperament</h3>
+        <p>${cat.temperament}</p>
       </div>`;
         loader.classList.add('hidden');
         catInfoEl.classList.remove('hidden');

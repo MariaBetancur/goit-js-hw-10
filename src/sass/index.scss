@@ -9,3 +9,16 @@
 .hidden {
   display: none;
 }
+.cat-info {
+  display: flex;
+  align-items: center;
+}
+img {
+  float: left;
+  margin-right: 10px;
+  margin-top: 10px;
+  width: 300px;
+}
+.cat-info > img {
+  align-self: flex-start;
+}

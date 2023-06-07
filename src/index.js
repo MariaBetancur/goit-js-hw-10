@@ -1,7 +1,7 @@
 import { fetchBreeds, fetchCatByBreed } from './cat-api.js';
 //peticion HTTP
 const breedSelect = document.querySelector('.breed-select');
-const catInfo = document.querySelector('.cat-info');
+const catInfoEl = document.querySelector('.cat-info');
 const loader = document.querySelector('.loader');
 const errorElement = document.querySelector('.error');
 breedSelect.classList.add('hidden');

@@ -33,15 +33,15 @@ breedSelect.addEventListener('change', e => {
       .then(catData => {
         loader.classList.add('hidden');
         console.log(catData);
-        //const cat = catData.breeds[0];
-        const cat = catData.breeds.length > 0 ? catData.breeds[0] : null;
+        const cat = catData.breeds[0];
+        //const cat = catData.breeds.length > 0 ? catData.breeds[0] : null;
         catInfoEl.innerHTML = `
       <div>
         <img src=${catData.url} alt=${cat.name} />
         <h3>${cat.name}</h3>
         <p>${cat.description}</p>
       </div>`;
-        //loader.classList.add('hidden');
+        loader.classList.add('hidden');
         catInfoEl.classList.remove('hidden');
       })
       .catch(error => {
